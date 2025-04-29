@@ -1,0 +1,24 @@
+{% extends 'films/layout.html' %}
+
+{% block title %}Список фильмов{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Список фильмов</h2>
+{% if films %}
+    <div class="row">
+        {% for film in films %}
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ film.title }}</h4>
+                        <p class="card-text"><strong>Описание:</strong> {{ film.description }}</p>
+                        <p class="card-text"><strong>Отзыв:</strong> {{ film.review }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <p>Нет добавленных фильмов.</p>
+{% endif %}
+{% endblock %}
