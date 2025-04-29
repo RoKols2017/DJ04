@@ -1,0 +1,11 @@
+{% extends 'films/layout.html' %}
+
+{% block title %}Главная - Movie Project{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="mb-4">Добро пожаловать в проект фильмов 🎬</h1>
+    <a href="{% url 'add_film' %}" class="btn btn-primary btn-lg me-2">Добавить фильм</a>
+    <a href="{% url 'film_list' %}" class="btn btn-success btn-lg">Посмотреть список</a>
+</div>
+{% endblock %}
